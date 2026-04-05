@@ -300,3 +300,24 @@ body {
   color: #38bdf8;
   text-decoration: none;
 }
+.experience{
+  text-align:center;
+  padding: 60px 20px;
+}
+.cards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card{
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  width: 250px;
+  transition: 0.3s;
+}
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(56,189,248,0.5);
+}
