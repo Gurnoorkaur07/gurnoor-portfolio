@@ -78,6 +78,25 @@
 
   <a href="certifications.html" class="btn">View All Certifications</a>
 </section>
+<section class="experience">
+  <h2>Experience</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Content Executive</h3>
+      <p>IEEE CIET Student Branch</p>
+      <p>
+        Managed digital content and collaborated with team members to organize events and improve engagement.
+      </p>
+    </div>
+    <div class="card">
+      <h3>Documentation Executive</h3>
+      <p>CSE Society</p>
+      <p>
+        Prepared structured documentation and SOPs to streamline processes and improve workflow.
+      </p>
+    </div>
+  </div>
+</section>
         <section class="contact-preview">
   <h2>Get In Touch</h2>
   <p>Email: gurnoor0716@gmail.com</p>
@@ -128,5 +147,17 @@ particlesJS("particles-js", {
         <i class="fab fa-linkedin"></i>
       </a>
     </div>
+    <script>
+      const text="Building Web Apps | Exploring AI | Future Software Engineer";
+      let i=0;
+      function typeEffect(){
+        if(i<text.length){
+          document.getElementById("typing-text").innerHTML+=text.charAt(i);
+          i++;
+          setTimeout(typeEffect,40);
+        }
+      }
+      typeEffect();
+    </script>
     </body>
 </html>
