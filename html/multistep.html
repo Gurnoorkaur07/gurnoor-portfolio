@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="step1" class="form-step">
+        <label>Full Name:</label>
+        <input type="text" id="fullName">
+        <button onClick="nextStep(1)">Next</button>
+    </div>
+    <div id="step2" class="form-step" style="display:none">
+        <label>Phone Number:</label>
+        <input type="tel" id="phone">
+        <button onClick="prevStep(2)">Back</button>
+         <button onclick="nextStep(2)">Next</button>
+    </div>
+</body>
+</html>

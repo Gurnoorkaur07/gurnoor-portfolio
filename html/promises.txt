@@ -1,0 +1,17 @@
+const checkAge=newPromise((resolve, reject) => {
+    const age=20;
+    if(age>=18){
+        resolve("Access granted");//success
+    }else{
+        reject("Access denied");//error
+    }
+});
+
+//Handling the newPromise
+checkAge
+   .then((message) => {
+    console.log(message);
+   })
+   .catch((error) =>{
+    console.error(error);
+   });

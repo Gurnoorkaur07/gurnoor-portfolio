@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Personal Finance Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>💰 AI Personal Finance Tracker</h1>
+  </header>
+
+  <section id="input-section">
+    <input type="date" id="date">
+    <input type="text" id="desc" placeholder="Description">
+    <input type="number" id="amount" placeholder="Amount">
+    <select id="category">
+      <option value="">Auto (AI) Detect</option>
+      <option>Food</option>
+      <option>Rent</option>
+      <option>Entertainment</option>
+      <option>Travel</option>
+      <option>Others</option>
+    </select>
+    <button id="add-btn">Add Transaction</button>
+  </section>
+
+  <section id="transactions">
+    <h2>Transactions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th><th>Description</th><th>Category</th><th>Amount</th>
+        </tr>
+      </thead>
+      <tbody id="transaction-list"></tbody>
+    </table>
+  </section>
+
+  <section id="insights">
+    <h2>💡 AI Insights</h2>
+    <div id="ai-summary">No insights yet...</div>
+  </section>
+
+  <section id="chat">
+    <h2>💬 Ask Your AI Assistant</h2>
+    <input type="text" id="chat-input" placeholder="Ask about your spending...">
+    <button id="chat-btn">Ask</button>
+    <div id="chat-response"></div>
+  </section>
+
+  <script src="ai.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

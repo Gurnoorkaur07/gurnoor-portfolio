@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FEE</title>
+</head>
+<body>
+  <p id="text">This is a static text</p>
+  <ul id="list_items">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <div id="root"></div>
+<style>
+  #strengthMeter{
+    width: 100%;
+    height: 10px;
+    background: white;
+    margin : 5px 0;
+  }
+  #strengthBar{
+    height: 100%;
+
+  }
+</style>
+<form>
+        <label for="email">Email</label>
+        <input type="email">
+        <label for="password">Password</label>
+        <input type="password">
+        <button type="button" onclick="alert('hello')">Submit</button>
+        <button type="button" id='btn'>Click</button>
+        <button id="btn2">Click</button>
+        <button type="button" id="btn1">Light mode</button>
+        <button type="button" id="btn3">Dark mode</button>
+        <button type="button" id="btn4">Click</button><br><br>
+        <form id="form">
+        <label>name(must need to fill!)</label>
+        <input type="text" id="name" required minlength="3">
+        <label>email(must fill the email)</label>
+        <input type="email" id="email" required>
+        <label>age(must fill the age)</label>
+        <input type="number" id="age" required>
+        <button>Submit</button><br><br>
+        <label>Password:</label>
+        <input type="password" id="userPassword"/>
+        <p id="passwordHint"></p>
+        <label>Password:</label>
+        <input type="password" id="password" oninput="checkPasswordStrength()"/>
+        <div id="strengthMeter">
+          <div id="strengthBar"></div>
+        </div>
+        <p id="strengrhText">Strength: Weak</p>
+      </form>
+  <script>
+    let list_items = document.getElementById("list_items");
+    let first_element = list_items.firstElementChild;
+    let last_element = list_items.lastElementChild;
+
+    first_element.style.color = "red";
+    last_element.style.color = "blue";
+
+    let newtext = document.getElementById("text");
+    newtext.innerHTML = "<b>dynamic text</b>";
+
+    let parent = document.getElementById("root");
+    let child = document.createElement("div");
+    child.setAttribute("id", "head");
+    child.innerHTML = "<h1>This is added dynamically</h1>";
+
+    parent.appendChild(child);
+    let btn=document.getElementById('btn');
+    btn.onclick=function(){
+      alert("Button Clicked");
+    }
+    document.getElementById("btn2").addEventListener("click",function(){
+      alert("Button clicked using addEventListener!");
+    });
+    let btn1=document.getElementById("btn1");
+    btn1.addEventListener("mouseover",function(){
+      document.body.style.background="white";
+    });
+    let btn3=document.getElementById("btn3");
+    btn3.addEventListener("mouseover",function(){
+      document.body.style.background="black";
+    });
+    document.getElementById("btn4").addEventListener("click",function(event){
+      console.log(event.type);
+      console.log(event.target);
+    });
+    const passwordInput=document.getElementById("userPassword");
+    const hint=document.getElementById("passwordHint");
+    passwordInput.addEventListener("input",() => {
+      if(pass.Length<8){
+        hint.textContent="Too short! (Need 8+ letters)";
+        hint.style.color="red";
+      }else if(!/[A-Z]/.test(pass)){
+        hint.textContent="Add a Capital Letter!";
+        hint.style.color="orange";
+      }else{
+        hint.textContent="Perfect!";
+        hint.style.color="green";
+      }
+    });
+  </script>
+
+</body>
+</html>

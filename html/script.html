@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FEE</title>
+  <style>
+    :root {
+      --bg-color: white;
+      --text-color: black;
+    }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      transition: all 0.3s ease;
+    }
+    .dark-mode {
+      --bg-color: #121212;
+      --text-color: white;
+    }
+    #modeToggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 8px 12px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button id="modeToggle">Toggle Mode</button>
+  <p id="text">This is a static text</p>
+  <ul id="list_items">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+  <div id="root"></div>
+  <form>
+    <label for="email">Email</label>
+    <input type="email">
+    <label for="password">Password</label>
+    <input type="password">
+    <button type="button" onclick="alert('hello')">Submit</button>
+    <button type="button" id='btn'>Click</button>
+    <button type="button" id="btn2">Click 2</button>
+  </form>
+  <script>
+    let list_items = document.getElementById("list_items");
+    let first_element = list_items.firstElementChild;
+    let last_element = list_items.lastElementChild;
+    first_element.style.color = "red";
+    last_element.style.color = "blue";
+    let newtext = document.getElementById("text");
+    newtext.innerHTML = "<b>dynamic text</b>";
+    let parent = document.getElementById("root");
+    let child = document.createElement("div");
+    child.setAttribute("id", "head");
+    child.innerHTML = "<h1>This is added dynamically</h1>";
+    parent.appendChild(child);
+    let btn = document.getElementById('btn');
+    btn.onclick = function () {
+      alert("Button Clicked");
+    }
+    document.getElementById("btn2").addEventListener("click", function () {
+      alert("Button clicked using addEventListener!");
+    });
+    const toggleBtn = document.getElementById('modeToggle');
+    toggleBtn.addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+
+</body>
+</html>

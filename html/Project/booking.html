@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Train - Cuties Railways</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cuties Railways </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book Train</a>
+            <a href="pnr.html">Check PNR</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Book Your Train Ticket</h2>
+        
+        <div class="form-container">
+            <h3>Search Trains</h3>
+            <form id="booking-form">
+                <div class="form-group">
+                    <label for="from">From Station:</label>
+                    <select id="from" required>
+                        <option value="">Select departure station</option>
+                        <option value="Amritsar">Amritsar</option>
+                        <option value="Rajpura">Rajpura</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Ludhiana">Ludhiana</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="to">To Station:</label>
+                    <select id="to" required>
+                        <option value="">Select destination station</option>
+                        <option value="Amritsar">Amritsar</option>
+                        <option value="Rajpura">Rajpura</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Ludhiana">Ludhiana</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="date">Journey Date:</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="passengers">Number of Passengers:</label>
+                    <select id="passengers">
+                        <option value="1">1 Passenger</option>
+                        <option value="2">2 Passengers</option>
+                        <option value="3">3 Passengers</option>
+                        <option value="4">4 Passengers</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Search Trains</button>
+            </form>
+        </div>
+        <div id="loading" class="hidden">
+            <div class="loading">🔍 Searching for trains...</div>
+        </div>
+        <div id="results" class="hidden">
+            <h3>Available Trains</h3>
+            <div id="train-list"></div>
+        </div>
+        <div id="no-results" class="hidden">
+            <div class="result-box">
+                <h3>😔 No Trains Found</h3>
+                <p>Sorry, no trains available for this route. Please try different stations.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Cuties Railways - Cuties Project</p>
+    </footer>
+</body>
+</html>

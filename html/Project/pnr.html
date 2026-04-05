@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check PNR Status - Cuties Railways</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cuties Railways </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book Train</a>
+            <a href="pnr.html">Check PNR</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Check PNR Status</h2>
+        <div class="form-container">
+            <h3>Enter PNR Number</h3>
+            <form id="pnr-form">
+                <div class="form-group">
+                    <label for="pnr">PNR Number (10 digits):</label>
+                    <input type="text" id="pnr" maxlength="10" placeholder="Enter PNR number" required>
+                </div>
+                <button type="submit" class="btn">Check Status</button>
+            </form>
+        </div>
+        <div id="loading" class="hidden">
+            <div class="loading">🔍 Checking PNR status...</div>
+        </div>
+        <div id="pnr-result" class="hidden">
+            <div class="pnr-details">
+                <h3>✅ Booking Found!</h3>
+                <div id="booking-info"></div>
+            </div>
+        </div>
+        <div id="not-found" class="hidden">
+            <div class="result-box">
+                <h3>❌ PNR Not Found</h3>
+                <p>The PNR number was not found. Please check and try again.</p>
+            </div>
+        </div>
+        <div class="result-box">
+            <h3>📝 Try These Sample PNRs:</h3>
+            <p>Since this is a demo, you can test with any PNR you create by booking a train, or try searching for a random 10-digit number starting with '24'.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Cuties Railways - Cuties Project</p>
+    </footer>
+
+    <script src="pnr.js"></script>
+</body>
+</html>
